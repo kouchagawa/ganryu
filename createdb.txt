@@ -1,0 +1,243 @@
+SET foreign_key_checks=0;
+
+TRUNCATE tnk_gacha_card;
+TRUNCATE tnk_gacha;
+TRUNCATE tnk_card_rate;
+TRUNCATE tnk_card_type;
+TRUNCATE tnk_card_evolution;
+TRUNCATE tnk_card;
+TRUNCATE tnk_ability;
+TRUNCATE tnk_theme;
+TRUNCATE tnk_rarity;
+TRUNCATE tnk_prefecture;
+TRUNCATE tnk_region;
+TRUNCATE tnk_command_effect;
+TRUNCATE tnk_command_category;
+TRUNCATE tnk_command;
+
+DROP TABLE IF EXISTS tnk_gacha_card;
+DROP TABLE IF EXISTS tnk_gacha;
+DROP TABLE IF EXISTS tnk_card_rate;
+DROP TABLE IF EXISTS tnk_card_type;
+DROP TABLE IF EXISTS tnk_card_evolution;
+DROP TABLE IF EXISTS tnk_card;
+DROP TABLE IF EXISTS tnk_ability;
+DROP TABLE IF EXISTS tnk_theme;
+DROP TABLE IF EXISTS tnk_rarity;
+DROP TABLE IF EXISTS tnk_prefecture;
+DROP TABLE IF EXISTS tnk_region;
+DROP TABLE IF EXISTS tnk_command_effect;
+DROP TABLE IF EXISTS tnk_command_category;
+DROP TABLE IF EXISTS tnk_command;
+
+CREATE TABLE tnk_command (
+  command_ID SMALLINT UNSIGNED PRIMARY KEY,
+  command_name VARCHAR(16),
+  command_kana VARCHAR(32),
+  command_icon VARCHAR(50),
+  command_cost TINYINT UNSIGNED,
+  command_limit_use VARCHAR(16),
+  command_notes VARCHAR(256),
+  command_todo VARCHAR(256),
+  command_official_type SMALLINT UNSIGNED,
+  command_official_order SMALLINT UNSIGNED,
+  command_official_text VARCHAR(100),
+  INDEX(command_official_type, command_official_order)
+);
+
+CREATE TABLE tnk_command_category (
+  command_category_ID SMALLINT UNSIGNED PRIMARY KEY,
+  command_category_type SMALLINT UNSIGNED,
+  command_category_order SMALLINT UNSIGNED,
+  command_category_name VARCHAR(20),
+  command_category_notes VARCHAR(256),
+  command_category_todo VARCHAR(256),
+  INDEX(command_category_order)
+);
+
+CREATE TABLE tnk_command_effect (
+  command_effect_ID SMALLINT UNSIGNED PRIMARY KEY,
+  command_id SMALLINT UNSIGNED,
+  command_category0_id SMALLINT UNSIGNED,
+  command_category1_id SMALLINT UNSIGNED,
+  command_effect_time VARCHAR(30),
+  command_effect_text VARCHAR(256),
+  command_effect_notes VARCHAR(256),
+  command_effect_todo VARCHAR(256),
+  FOREIGN KEY(command_id) REFERENCES tnk_command(command_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(command_category0_id) REFERENCES tnk_command_category(command_category_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(command_category1_id) REFERENCES tnk_command_category(command_category_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE tnk_region (
+  region_ID TINYINT UNSIGNED PRIMARY KEY,
+  region_order TINYINT UNSIGNED,
+  region_name VARCHAR(6),
+  region_color VARCHAR(12),
+  INDEX(region_order)
+);
+
+CREATE TABLE tnk_prefecture (
+  prefecture_ID TINYINT UNSIGNED PRIMARY KEY,
+  prefecture_order TINYINT UNSIGNED,
+  prefecture_name VARCHAR(3),
+  prefecture_color VARCHAR(12),
+  INDEX(prefecture_order)
+);
+
+CREATE TABLE tnk_rarity (
+  rarity_ID TINYINT UNSIGNED PRIMARY KEY,
+  rarity_order TINYINT UNSIGNED,
+  rarity_name VARCHAR(3),
+  INDEX(rarity_order)
+);
+
+CREATE TABLE tnk_theme (
+  theme_ID TINYINT UNSIGNED PRIMARY KEY,
+  theme_order TINYINT UNSIGNED,
+  theme_name VARCHAR(4),
+  INDEX(theme_order)
+);
+
+CREATE TABLE tnk_ability (
+  ability_type TINYINT UNSIGNED,
+  ability_ID TINYINT UNSIGNED,
+  ability_order TINYINT UNSIGNED,
+  ability_antiskill_target TINYINT UNSIGNED,
+  ability_regionbonus_rate SMALLINT UNSIGNED,
+  ability_name VARCHAR(14),
+  ability_text VARCHAR(42),
+  PRIMARY KEY(ability_type, ability_ID),
+  FOREIGN KEY(ability_antiskill_target) REFERENCES tnk_theme(theme_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE tnk_card (
+  card_ID MEDIUMINT UNSIGNED PRIMARY KEY,
+  card_evolution_max TINYINT UNSIGNED,
+  card_limitbreak_max TINYINT,
+  card_limitbreak_base_attack SMALLINT UNSIGNED,
+  card_limitbreak_base_defence SMALLINT UNSIGNED,
+  card_image VARCHAR(50),
+  card_skill_level TINYINT UNSIGNED,
+  card_type_change BOOL,
+  command_id SMALLINT UNSIGNED,
+  card_notes VARCHAR(256),
+  FOREIGN KEY(command_id) REFERENCES tnk_command(command_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE tnk_card_evolution (
+  card_id MEDIUMINT UNSIGNED,
+  card_evolution_ID TINYINT UNSIGNED,
+  region_id TINYINT UNSIGNED,
+  prefecture_id TINYINT UNSIGNED,
+  rarity_id TINYINT UNSIGNED,
+  card_level_max TINYINT UNSIGNED,
+  card_base_cost SMALLINT UNSIGNED,
+  card_base_attack MEDIUMINT UNSIGNED,
+  card_base_defence MEDIUMINT UNSIGNED,
+  card_upgrade_base_attack SMALLINT UNSIGNED,
+  card_upgrade_base_defence SMALLINT UNSIGNED,
+  ability_type TINYINT UNSIGNED,
+  ability_id TINYINT UNSIGNED,
+  PRIMARY KEY(card_id, card_evolution_ID),
+  FOREIGN KEY(card_id) REFERENCES tnk_card(card_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(region_id) REFERENCES tnk_region(region_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(prefecture_id) REFERENCES tnk_prefecture(prefecture_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(rarity_id) REFERENCES tnk_rarity(rarity_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(ability_type, ability_id) REFERENCES tnk_ability(ability_type, ability_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE tnk_card_type (
+  card_id MEDIUMINT UNSIGNED,
+  card_evolution_id TINYINT UNSIGNED,
+  card_type_ID TINYINT UNSIGNED,
+  theme_id TINYINT UNSIGNED,
+  card_name VARCHAR(30),
+  card_kana VARCHAR(30),
+  card_skill_name VARCHAR(30),
+  card_skill_text0 VARCHAR(64),
+  card_skill_text1 VARCHAR(64),
+  card_flavor_text VARCHAR(256),
+  PRIMARY KEY(card_id, card_evolution_id, card_type_ID),
+  FOREIGN KEY(theme_id) REFERENCES tnk_theme(theme_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  INDEX(card_name, card_kana)
+);
+
+CREATE TABLE tnk_card_rate (
+  card_id MEDIUMINT UNSIGNED,
+  card_evolution_id TINYINT UNSIGNED,
+  card_rate_cost SMALLINT UNSIGNED,
+  card_rate_attack MEDIUMINT UNSIGNED,
+  card_rate_defence MEDIUMINT UNSIGNED,
+  PRIMARY KEY(card_id, card_evolution_id, card_rate_cost),
+  FOREIGN KEY(card_id, card_evolution_id) REFERENCES tnk_card_evolution(card_id, card_evolution_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  INDEX(card_rate_attack, card_rate_defence)
+);
+
+CREATE TABLE tnk_gacha (
+  gacha_ID MEDIUMINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  event_name VARCHAR(20),
+  gacha_title VARCHAR(20),
+  gacha0_name VARCHAR(10),
+  gacha0_start DATETIME,
+  gacha0_end DATETIME,
+  gacha1_name VARCHAR(10),
+  gacha1_start DATETIME,
+  gacha1_end DATETIME,
+  gacha_notes VARCHAR(256)
+);
+
+CREATE TABLE tnk_gacha_card (
+  gacha_card_ID MEDIUMINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  gacha_id MEDIUMINT UNSIGNED,
+  card_id MEDIUMINT UNSIGNED,
+  card_evolution_id TINYINT UNSIGNED,
+  card_rate_cost SMALLINT UNSIGNED,
+  gacha_card_order SMALLINT UNSIGNED,
+  gacha_card_notes  VARCHAR(256),
+  FOREIGN KEY(gacha_id) REFERENCES tnk_gacha(gacha_ID)
+    ON UPDATE CASCADE ON DELETE RESTRICT,
+  FOREIGN KEY(card_id, card_evolution_id, card_rate_cost) REFERENCES tnk_card_rate(card_id, card_evolution_id, card_rate_cost)
+    ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_command.csv' INTO TABLE tnk_command
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_command_category.csv' INTO TABLE tnk_command_category
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_command_effect.csv' INTO TABLE tnk_command_effect
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_region.csv' INTO TABLE tnk_region
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_prefecture.csv' INTO TABLE tnk_prefecture
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_rarity.csv' INTO TABLE tnk_rarity
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_theme.csv' INTO TABLE tnk_theme
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_ability.csv' INTO TABLE tnk_ability
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_card.csv' INTO TABLE tnk_card
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_card_evolution.csv' INTO TABLE tnk_card_evolution
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_card_type.csv' INTO TABLE tnk_card_type
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_card_rate.csv' INTO TABLE tnk_card_rate
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_gacha.csv' INTO TABLE tnk_gacha
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_gacha_card.csv' INTO TABLE tnk_gacha_cards
+  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
