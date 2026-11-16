@@ -11,6 +11,7 @@ if(strpos($_SERVER["HTTP_HOST"], 'localhost')===false) {
 }
 define("XREA_FREE", true);
 define("IS_SITEKIT", true);
+define('ENABLE_ADSENSE', false);
 define("COMMON_IMG_PASS", "/tnk47/ratio20/images/common/");
 define("COMMAND_ICON_IMG_PASS", "/tnk47/ratio20/illustrations/command/");
 define("COMMAND_ICON_THUMB_PASS", COMMAND_ICON_IMG_PASS."thumb/");
