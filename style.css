@@ -1,0 +1,474 @@
+/*
+Theme Name: Twenty Sixteen Child
+Template: twentysixteen
+*/
+
+/* サイトヘッダーの色反転とグラデーション */
+.site-header {
+	background-color: #1a1a1a;
+	padding: 16px 7.6923%;
+}
+
+/* サイトヘッダー画像 */
+.header-image {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/* z-index: 10; */
+	/* position: relative; */
+}
+
+/* サイトフッターの色反転 */
+.site-footer {
+	background-color: #1a1a1a;
+	padding-top: 28px;
+}
+
+/* サイトフッター文字色 */
+.site-info {
+	color: white;
+}
+
+/* サイトフッターリンク文字色 */
+.site-info a {
+	color: white;
+}
+
+/* サイトフッターソーシャルリンクアイコンメニュー背景色繰り抜き */
+.menu-item {
+	background-color: white;
+	border-radius: 50%;
+}
+
+/* サイトフッター */
+/* Xソーシャルリンクアイコン */
+.social-navigation a[href*="x.com"]:before {
+	content: "\1D54F";
+    line-height: 30px;
+}
+
+/* Amebaソーシャルリンクアイコン */
+@font-face {
+	font-family: 'icomoon';
+	src: url('icons/icomoon.eot?u4niwi');
+	src: url('icons/icomoon.eot?u4niwi#iefix') format('embedded-opentype'),
+		url('icons/icomoon.ttf?u4niwi') format('truetype'),
+		url('icons/icomoon.woff?u4niwi') format('woff'),
+		url('icons/icomoon.svg?u4niwi#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+.social-navigation a[href*="ameblo.jp"]:before {
+	content: "\e900";
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* twentysixteenの周りの枠を消す */
+body {
+	background: none;
+}
+
+.site {
+	margin: 0px;
+}
+
+body:not(.custom-background-image):before, body:not(.custom-background-image):after {
+	display: none;
+}
+
+/* フォント指定 */
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Arial, Helvetica, sans-serif;
+}
+
+/* PC画面サイト右上の無駄な場所利用テスト
+div.test_header {
+	z-index: 20;
+	position: absolute;
+	margin-top: 1%;
+	margin-left: 68%;
+} */
+
+/* パンくずリスト */
+.breadcrumbs {
+	margin-top: 1.5em;
+	padding: 0.5em 0.5em;
+	border: 2px dotted;
+}
+
+/* コンテンツトップ位置調整 */
+.site-content {
+	margin-top: 0em;
+}
+
+/* 記事トップ位置調整 */
+.content-area {
+	margin-top: 0em;
+}
+
+div.entry-content {
+	margin-top: 36px;
+}
+
+/* エントリーフッター */
+@media screen and (min-width: 61.5625em) {
+	body:not(.search-results) article:not(.type-page) .entry-footer {
+		margin-top: 40px;
+	}
+}
+
+
+/* ページヘッダー囲い */
+.page-header {
+	margin-top: 1.5em;
+	margin-bottom: 0em;
+	padding: 1em 0.5em 0em 0.5em;
+	border: 0px;
+}
+
+/* 投稿トップ位置調整 */
+.post {
+	margin-top: 1.5em;
+}
+
+/* 固定ページトップ位置調整 */
+.type-page {
+	margin-top: 1.5em;
+}
+
+/* アイキャッチ画像位置調整 */
+.post-thumbnail img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* エントリーヘッダー見出し1 */
+.entry-header h1 {
+	font-size: 1.8em;
+	border-bottom: dashed 3px #1a1a1a;
+}
+
+/* エントリーヘッダー見出し2 */
+.entry-header h2 {
+	font-size: 1.6em;
+	border-bottom: dashed 3px #1a1a1a;
+}
+
+/* エントリー記事見出し2 */
+.entry-content h2 {
+	font-size: 1.4em;
+	position: relative;
+	width: auto;
+	padding: 0.25em 1em;
+	border-top: solid 2px #1a1a1a;
+	border-bottom: solid 2px #1a1a1a;
+}
+
+.entry-content h2:before, .entry-content h2:after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	width: 2px;
+	height: -webkit-calc(100% + 10px);
+	height: calc(100% + 10px);
+	background-color: #1a1a1a;
+}
+
+.entry-content h2:before {
+	left: 4px;
+}
+
+.entry-content h2:after {
+	right: 4px;
+}
+
+/* エントリー記事見出し3 */
+.entry-content h3 {
+	font-size: 1.0em;
+	font-weight: bold;
+	padding: 0.25em 0.5em;
+	background: transparent;
+	border-left: solid 5px #1a1a1a;
+	margin: 40px auto 4px 8px;
+}
+
+/* エントリー記事見出し4 */
+.entry-content h4 {
+	margin: 30px auto 4px 8px;
+	font-size: medium;
+	font-weight: normal;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+/* エントリー記事段落 */
+.entry-content p {
+	padding: 0px 8px 0px 8px;
+}
+
+.entry-content pre {
+	padding: 8px;
+}
+
+/* エントリー記事リスト */
+.entry-content ul {
+	list-style: none;
+	margin-left: 8px;
+}
+
+.entry-content ul li {
+	padding: 5px 0;
+}
+
+/* エントリー記事番号付きリスト */
+.entry-content ol {
+	margin-left: 24px;
+}
+
+/* 区切り */
+hr.wp-block-separator {
+	background: #b1b1b1;
+	max-width: none;
+	width: 33% !important;
+	height: 1px;
+	margin: 48px auto 12px 0px;
+}
+
+/* コメント見出し */
+.comments-area h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	border-top: 0px;
+	border-bottom: dashed 2px #1a1a1a;
+	padding-top: 0em;
+}
+
+/* コメント本文 */
+.comments-area p {
+	font-size: 0.9em;
+	padding: 0px 8px 0px 8px;
+}
+
+/* 記事個別表示時の『コメントを残す』 */
+.comment-respond h2 {
+	font-size: 1.2em;
+}
+
+/* コメントボタンセンタリング */
+p.form-submit {
+	text-align: center;
+}
+
+/* 次の記事へのリンクを右に寄せる */
+.nav-next {
+	text-align: right;
+}
+
+/* 前後の記事へのリンクの中央線を破線にする */
+.post-navigation div + div {
+	border-top: dashed 3px #1a1a1a;
+}
+
+/* 前後の記事へのリンクの上下の線を破線にする */
+.post-navigation {
+    border-top: dashed 3px #1a1a1a;
+    border-bottom: dashed 3px #1a1a1a;
+}
+
+/* ページングリンクの上の線を破線にする */
+.pagination {
+	padding-left: 1em;
+	padding-bottom: 10px;
+    border-style: inset;
+}
+
+/* 記事下部の次ページへのナビリンク
+.nav-links > a.next {
+	font-size: 1.1em;
+} */
+
+/* 記事下部ナビリンクの次の記事へのリンク
+.nav-links > div > a > span.post-title {
+	font-size: 1.0em;
+} */
+
+/* 記事下部ナビリンク右端の黒い長方形を削除
+.pagination .nav-links::after,
+.pagination::after,
+.pagination .nav-links::before,
+.pagination::before {
+	display: none;
+} */
+
+/* 記事下部ナビリンク右端の黒い長方形を削除 */
+/* 矢印は青色
+.pagination .prev,
+.pagination .next {
+	background-color: transparent;
+	color: #6495ed;
+} */
+
+/* テーブル整形 */
+.wp-block-table table {
+	margin: auto;
+	width: 70%;
+	table-layout: fixed;
+}
+
+.wp-block-table th {
+	font-size: 0.7em;
+	color: white;
+	width: auto;
+	background: #1a1a1a;
+	text-align: center;
+}
+
+.wp-block-table td {
+	font-size: 0.7em;
+	text-align: center;
+}
+
+.wp-block-table figcaption {
+	font-size: 0.9em;
+	padding: 0.3em;
+	text-align: center !important;
+}
+
+/* カラムの横幅は以下の形で記事ごとに調整
+.wp-block-table th:nth-child(1) {width:4em;}
+*/
+ 
+/* 2列リストテーブル整形 */
+.wp-block-table-2clumns table {
+	border: 0em;
+	margin: 0.5em;
+	width: auto;
+}
+
+.wp-block-table-2clumns td {
+	border: 0em;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+	font-size: 1em;
+}
+
+.wp-block-table-2clumns td:first-child {
+	white-space: nowrap;
+}
+
+/* 画像キャプションセンタリング */
+.wp-block-image figcaption {
+	font-size: 0.9em;
+	text-align: center !important;
+	padding: 0em;
+}
+
+/* 画像クローラーの画像センタリング */
+.entry-attachment {
+	text-align: center;
+}
+
+/* 画像クローラーの画像キャプションセンタリング */
+.entry-caption {
+	text-align: center;
+}
+
+/* ウィジェット見出し上罫線削除 */
+/* 下のウィジェットまでの距離 */
+.widget {
+	border-style: none;
+	padding-top: 0em;
+	margin-bottom: 1.5em;
+}
+
+/* ウィジェット見出し下破線追加 */
+/* 見出しフォント設定 */
+.widget-title {
+	border-bottom: dashed 2px #1a1a1a;
+	padding-bottom: 0.1em;
+	font-weight: bold;
+}
+
+/* ウィジェット見出し文字から最初のエントリーまでの距離 */
+.widget .widget-title {
+	margin-bottom: 0.8em;
+}
+
+/* ウィジェットのリストの●を消し若干左に移動 */
+.widget ul {
+	list-style-type: none;
+	margin: 0.5em;
+}
+
+/* ウィジェットの『リンク』部分のリンクの下線を消す */
+/* TwentySixteenではリンクの下線はtext-decorationではなくbox-shadowで実現しているので注意 */
+/* 参考 https://hack-le.com/ulaunderline/ */
+.custom-html-widget a {
+	box-shadow: none;
+}
+
+/* ウィジェットの『リンク』部分のdivとulの間の余計な空間を消す */
+.textwidget:before, .textwidget:after {
+	content: none;
+}
+
+/* サイドバー上部位置調整 */
+section#nav_menu-2 {
+	margin-top: 1.5em;
+}
+
+/* サイドバー上部のAdSense位置調整 */
+div.widget-upper {
+	margin: 1.5em auto;
+}
+
+/* TwentySixteen固有の問題のAdSense広告の青色の影を消す */
+div.adsense ins {
+	background: transparent;
+	padding: 0px;
+}
+
+/* AdSenseセンタリング */
+div.adsense {
+	text-align: center;
+}
+
+/* AddtoAny share buttons plugin シェアボタン位置調整 */
+.addtoany_share_save_container {
+	text-align: center;
+	padding-top: 36px;
+}
+
+/* コンタクトフォーム送信ボタンのセンタリング */
+.submitContactForm {
+	text-align: center;
+	padding-left: 60px;
+}
+
+/* reCAPTCHAバッジを隠す */
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+/* reCAPTCHAポリシー表示 */
+.reCaptchaPolicy {
+	width: 336px;
+	font-size: small;
+	text-align: center;
+	margin: 2.0em auto;
+}
+
+/* reCAPTCHAバッジのリサイズとセンタリング
+.grecaptcha-badge {
+	margin: 2.0em auto;
+	transform: scale(0.7);
+} */
