@@ -6,9 +6,9 @@ Card search system and command search system for Tenka Touitsu Chronicle[^1].
 [^1]: [Tenka Touitsu Chronicle](https://tnk47.ameba.jp/) - Japanese social games that have ended services.
 
 ## Requirement
-- PHP8.2.18 or lator
-- MariaDB10.6.17 or lator
-- JQuery3.5.1 or lator
+- PHP8.2.18 or later
+- MariaDB10.6.17 or later
+- JQuery3.5.1 or later
 
 ## Usage
 Designed for a shortcode to be displayed in a WordPress post.
