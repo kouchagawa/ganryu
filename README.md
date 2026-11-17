@@ -17,8 +17,8 @@ Designed for a shortcode to be displayed in a WordPress post.
 :)
 
 ## Reference
-- [Card search](https://ganryu.jp/card/)
-- [Command search](https://ganryu.jp/command/)
+- [Card search](https://kouchagawa.s10.xrea.com/card/)
+- [Command search](https://kouchagawa.s10.xrea.com/command/)
 
 ## Author
 Tarunosuke Kouchagawa
