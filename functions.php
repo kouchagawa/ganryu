@@ -299,7 +299,7 @@ function getAdsenseWidgetLower() {
 
 // ギフトBOX削除日時
 function giftbox() {
-	$template="<script src='/wp-content/themes/twentysixteen-child/tnk/js/giftbox.js'></script>";
+	$template="";
 	if(wp_is_mobile()) {
 		$template.=""
 			."<p>現在日時<br />"
@@ -319,6 +319,8 @@ function giftbox() {
 			."</figure>";
 	}
 	ob_start();
+	$js_url = get_theme_file_uri('/tnk/js/giftbox.js');
+	$template.="<script src='{$js_url}'></script>";
 	echo $template;
 	return ob_get_clean();
 }
@@ -379,10 +381,6 @@ function WhatsNew() {
 }
 add_shortcode("WhatsNew", "WhatsNew");
 
-
-//require_once "tnk/tnk_include.php";
-//require_once "tnk/tnk_card.php";
-//require_once "tnk/tnk_command.php";
 
 // 戦技検索ショートコード
 function SearchCommand() {
