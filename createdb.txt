@@ -239,5 +239,5 @@ LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_card_rate.csv' INTO TABLE tnk_card_ra
   FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
 LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_gacha.csv' INTO TABLE tnk_gacha
   FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
-LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_gacha_card.csv' INTO TABLE tnk_gacha_cards
+LOAD DATA INFILE '/xampp/htdocs/tnk_db/tnk_gacha_card.csv' INTO TABLE tnk_gacha_card
   FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
