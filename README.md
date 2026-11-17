@@ -25,5 +25,5 @@ Tarunosuke Kouchagawa
 - [X](https://x.com/kouchagawa)
 - [Ameblo](https://ameblo.jp/powerslash/)
 
-## Licence
+## License
 Haven't decided yet.
