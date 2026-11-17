@@ -1,0 +1,192 @@
+.region {
+	margin-left: 4px;
+	padding: 4px 5px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.hokkaitohoku {
+	background: rgb(57,119,178);
+	color: rgb(255,255,221);
+}
+
+.kanto {
+	background: rgb(169,187,12);
+	color: rgb(255,255,221);
+}
+
+.chubu {
+	background: rgb(176,98,185);
+	color: rgb(255,255,221);
+}
+
+.kinki {
+	background: rgb(229,191,13);
+	color: rgb(255,255,221);
+}
+
+.chushikoku {
+	background: rgb(231,138,5);
+	color: rgb(255,255,221);
+}
+
+.kyushu {
+	background: rgb(215,0,46);
+	color: rgb(255,255,221);
+}
+
+.independent {
+	background: rgb(85,85,85);
+	color: rgb(255,255,221);
+}
+
+.national {
+	background: rgb(238,238,238);
+	color: rgb(51,51,51);
+}
+
+.special {
+	background: rgb(238,238,238);
+	color: rgb(51,51,51);
+}
+
+.evolution {
+	background: rgb(238,238,238);
+	color: rgb(51,51,51);
+}
+
+.east {
+	background: rgb(30,156,183);
+	color: rgb(255,255,221);
+}
+
+.west {
+	background: rgb(238,96,77);
+	color: rgb(255,255,221);
+}
+
+.name {
+	margin-left: 4px;
+} 
+
+/*
+.commandName a {
+	color: rgb(51,51,51);
+}
+
+.commandName a: hover {
+	color: #007acc;
+}
+*/
+
+.contentCard dl {
+	height: auto;
+	padding: 3px 3px 1px;
+	margin: 4px 0px 0px 0px;
+	border-radius: 3px;
+}
+
+.contentCard dt {
+	line-height: 16px;
+	font-size: 10px;
+	float: left;
+	width: 35px;
+	text-align: center;
+	padding: 0px;
+	border-radius: 3px;
+}
+
+.contentCard dd {
+	font-size: 14px;
+}
+
+.contentCard div.items {
+	margin-top: 4px;
+}
+
+.items p.level {
+	margin: 0px;
+	padding: 0px;
+	color: rgb(255,255,221);
+}
+
+.items span.levelLabel {
+	color: rgb(247,219,145);
+}
+
+.items dt {
+	background: rgb(136,136,136)
+}
+
+.items dd {
+	margin: 0px 0px 4px 38px;
+}
+
+.items p.skillText {
+	padding: 0px;
+	margin: 0px;
+	color: rgb(177,171,155);
+}
+
+.contentCard div.command {
+	background: rgb(252,245,215);
+	padding: 0px 5px 0px 5px;
+	margin: 0px 10px 0px 10px;
+	border-radius: 5px;
+}
+
+.command figure.commandIcon {
+	display: inline-block;
+	margin: 5px 10px 5px 2px;
+	float: left;
+}
+
+.command figure.commandIcon img {
+	width: 50px;
+	height: 50px;
+}
+
+.command dl {
+	display: inline-block;
+	width: 210px;
+	background: rgb(252,245,215);
+	margin: 0px;
+	padding: 5px 0px 5px 0px;
+}
+
+.command dt {
+	font-size: 10px;
+	color: rgb(255,255,221);
+	background: rgb(68,68,68);
+}
+
+.command dd {
+	font-size: 12px;
+	color: rgb(0,0,0);
+	margin: 0px 0px 0px 40px;
+}
+
+.command p.commandText {
+	font-size: 12px;
+	line-height: 12px;
+	padding: 0px;
+	margin-bottom: 0px;
+	color: rgb(119,119,119);
+}
+
+img.spinnerImg {
+	vertical-align: -3px;
+}
+
+span.dynamicAbilityList {
+	width: 128px;
+	display: inline-block;
+}
+
+select.narrowDown {
+	width: 128px;
+}
+
+select.cost {
+	width: 128px;
+}

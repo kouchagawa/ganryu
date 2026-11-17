@@ -1,0 +1,105 @@
+div.infoCommand {
+	width: 308px;
+	height: auto;
+	margin: 14px auto 14px auto;
+	word-break: break-all;
+	padding: 0px;
+	background-color: #fcf5d7;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+/*
+.infoCommand a {
+	color: black;
+	box-shadow: none;
+}
+*/
+
+.infoCommand a:hover {
+	color: #007acc;
+}
+
+.infoCommand a.image {
+	box-shadow: none;
+}
+
+.infoCommand p {
+	font-size: 0.8em;
+	margin: 2px 7px 0px 2px;
+}
+
+.infoCommand div.header {
+	padding: 3px 5px 5px 5px;
+}
+
+.infoCommand div.detail {
+	border-top: 1px dashed gray;
+	padding: 3px 5px 5px 5px;
+}
+
+.infoCommand p.name {
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+.infoCommand p.kana {
+	font-size: 0.8em;
+	margin-top: 0px;
+}
+
+.infoCommand span.card {
+	margin-left: 4px;
+	font-weight: bold;
+}
+
+.infoCommand span.label {
+	border-radius: 3px;
+	margin-right: 4px;
+	padding: 3px;
+	text-align: center;
+	font-size: 11.25px;
+	font-weight: bold;
+	background: #777;
+	color: #ffd;
+}
+
+.infoCommand p.text {
+	line-height: 20px;
+}
+
+.infoCommand .header figure.icon {
+	display: inline-block;
+	vertical-align: top;
+	margin: 9px 0px 0px 9px;
+}
+
+.infoCommand .header figure.icon img {
+	width: 50px;
+	height: 50px;
+}
+
+.infoCommand .header div.headline {
+	display: inline-block;
+}
+
+.infoCommand .header div.headerText {
+	margin: 0px 0px 5px 0px;
+}
+
+img.spinnerImg {
+	vertical-align: -3px;
+}
+
+select.parentCategory {
+	width: 64px;
+}
+
+span.dynamicCategoryList {
+	width: 192px;
+	display: inline-block;
+}
+
+select.category {
+	width: 192px;
+}

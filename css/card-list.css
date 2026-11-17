@@ -1,0 +1,96 @@
+div.infoCard {
+	width: 308px;
+	height: auto;
+	margin: 14px auto 14px auto;
+	word-break: break-all;
+	border-left: 3px solid rgb(178,141,23);
+	border-right: 3px solid rgb(178,141,23);
+	border-top: 2px solid rgb(74,68,54);
+	border-bottom: 2px solid rgb(74,68,54);
+	line-height: 17px;
+	font-weight: bold;
+}
+
+/*
+.infoCard a {
+	color: black;
+	box-shadow: none;
+}
+*/
+
+.infoCard a:hover {
+	color: #007acc;
+}
+
+.infoCard a.image {
+	box-shadow: none;
+}
+
+.infoCard div.header {
+	height: 32px;
+	line-height: 32px;
+	background: rgb(107,103,95);
+	background: -webkit-gradient(linear,0% 0%,0% 100%,from(rgb(177,171,157)),to(rgb(107,103,95)));
+	white-space: nowrap;
+	overflow-y: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.infoCard div.header::-webkit-scrollbar {
+	display: none
+}
+
+.infoCard .name a {
+	color: rgb(255,212,77);
+}
+
+.infoCard .name a:hover {
+	color: #007acc;
+}
+
+.infoCard div.contentCard {
+	padding: 0px 0px 10px 0px;
+	margin: 0px;
+	background: rgb(177,171,157);
+}
+
+.infoCard .contentCard figure.card {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 5px 0px 10px;
+}
+
+.infoCard .contentCard figure.card img {
+	width: 120px;
+	height: 160px;
+}
+
+.infoCard .contentCard div.items {
+	display: inline-block;
+	width: 151px;
+}
+
+.infoCard .items span.limitStar {
+	color: rgb(59,51,36);
+	margin-left: 5px;
+	font-size: 10px;
+}
+
+.infoCard .items dl {
+	color: rgb(255,255,221);
+	background: rgba(23,17,7,0.6);
+}
+
+.infoCard p {
+	font-size: 14px;
+}
+
+.infoCard p.skillText {
+	font-size: 11px;
+	line-height: 14px;
+}
+
+.infoCard .contentCard div.command {
+	margin-top: 10px;
+}

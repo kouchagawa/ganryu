@@ -1,0 +1,248 @@
+div.infoCardDetail {
+	width: 308px;
+	height: auto;
+	margin: 14px auto 14px auto;
+	word-break: break-all;
+	font-size: 14px;
+	color: rgb(255,255,221);
+	border: 2px solid rgb(181,173,153);
+	background: url("/tnk47/ratio20/images/common/bg_dialogBox.png") 0% 0% / 304px 24px repeat;
+	box-shadow: rgba(0,0,0,0.8) 3px 3px 7px inset, rgba(0,0,0,0.8) -3px -3px 7px inset;
+	line-height: 17px;
+	font-weight: bold;
+}
+
+.infoCardDetail span.label {
+	border-radius: 3px;
+	margin-left: 2px;
+	margin-right: 4px;
+	padding: 3px;
+	text-align: center;
+	vertical-align: 1px;
+	font-size: 10px;
+	line-height: 11px;
+	background: rgb(136,136,136);
+	color: #ffd;
+}
+
+.infoCardDetail span.value {
+	margin-right: 3px;
+}
+
+/*
+.infoCardDetail a {
+	color: black;
+	box-shadow: none;
+}
+*/
+
+.infoCardDetail a:hover {
+	color: #007acc;
+}
+
+.infoCardDetail a.image {
+	box-shadow: none;
+}
+
+.infoCardDetail p {
+	font-size: 14px;
+}
+
+.infoCardDetail p.header {
+	line-height: 26px;
+	margin: 5px 0px 0px 0px;
+}
+
+.infoCardDetail p.header::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(156,147,126,0)), color-stop(0.15,rgb(156,147,126)), color-stop(0.85,rgb(156,147,126)), to(rgba(156,147,126,0)));
+}
+
+.infoCardDetail .name {
+	font-size: 12px;
+	margin-left: 4px;
+}
+
+.infoCardDetail div.contentCard {
+	padding: 0px 0px 5px 0px;
+	margin: 0px;
+}
+
+.infoCardDetail .contentCard figure.card {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.infoCardDetail .contentCard figure.card img {
+	width: 240px;
+	height: 320px;
+}
+
+.infoCardDetail .contentCard div.items {
+	margin-left: 4px;
+}
+
+.infoCardDetail .items p.level {
+	text-align: center;
+}
+
+.infoCardDetail .items span.limitStar {
+	color: rgb(85,85,85);
+	margin-left: 8px;
+}
+
+.infoCardDetail p.switchCardTypeTitle {
+	text-align: center;
+	font-size: 11px;
+	color: #ffd;
+	background: #999;
+	border-radius: 5px;
+	margin: 5px 7px;
+	padding: 4px 3px 1px 3px;
+}
+
+.infoCardDetail a.cardChange {
+	width: 94px;
+	line-height: 28px;
+	margin-right: 2px;
+	color: rgb(219,213,192);
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(0,0,0)), color-stop(0.5,rgb(0,0,0)), color-stop(0.51,rgb(51,51,51)), to(rgb(80,80,80)));
+	box-shadow: rgba(0,0,0,0.5) -1px -1px 1px inset, rgba(255,255,255,0.3) 1px 1px 0px inset;
+	text-shadow: rgba(0,0,0,0.2) -1px -1px 0px, rgba(0,0,0,0.2) 1px 1px 0px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+}
+
+.infoCardDetail a.isActive {
+	color: rgb(255,255,255);
+	box-shadow: rgba(0,0,0,0.5) -1px -1px 2px inset, rgba(0,0,0,0.5) 1px 1px 2px inset;
+	pointer-events: none;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%,
+		from(rgb(198,221,0)),
+		color-stop(0.5,rgb(135,174,0)),
+		color-stop(0.51,rgb(117,175,0)),
+		to(rgb(137,206,0)));
+}
+
+.infoCardDetail a.cardChange:first-child {
+	border-radius: 20px 0px 0px 20px;
+}
+
+.infoCardDetail a.cardChange:last-child {
+	border-radius: 0px 20px 20px 0px;
+	margin-right: 0px;
+}
+
+.infoCardDetail .flavorText::before {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(171,151,102,0)), color-stop(0.15,rgb(171,151,102)), color-stop(0.85,rgb(171,151,102)), to(rgba(171,151,102,0)));
+}
+
+.infoCardDetail .flavorText {
+	margin: 0px 0px 10px 0px;
+}
+
+.infoCardDetail .flavorText p {
+	line-height: 14px;
+	margin: 0px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.infoCardDetail .flavorText::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(171,151,102,0)), color-stop(0.15,rgb(171,151,102)), color-stop(0.85,rgb(171,151,102)), to(rgba(171,151,102,0)));
+}
+
+.infoCardDetail .innerBox {
+	display: table;
+	content: '';
+	clear: both;
+	width: 288px;
+	margin: 0px auto 10px auto;
+	border: 1px solid rgb(204, 204, 204);
+	background-color: rgba(0,0,0,0.8);
+}
+
+.infoCardDetail .innerBox dt {
+	float: left;
+	text-align: center;
+	font-size: 13px;
+	line-height: 121px;
+	margin-left: 5px;
+}
+
+.infoCardDetail .innerBox dd {
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	width: 70px;
+	height: 116px;
+	margin: 5px 0px 0px 5px;
+}
+
+.infoCardDetail figure.book img {
+	width: 70px;
+	height: 93px;
+	margin-bottom: 0px;
+}
+
+.infoCardDetail p.unKnownEvolution {
+	width: 70px;
+	height: 93px;
+	position: relative;
+	margin-bottom: 0px;
+	padding: 0px;
+	border: 1px solid rgb(59,59,59);
+	line-height: 93px;
+	font-size: 93px;
+	text-shadow: rgba(0,0,0,0.6) -1px -1px 1px, rgba(255,255,255,0.6) 1px 1px 1px;
+}
+
+.infoCardDetail p.unKnownEvolution::after {
+	background: -webkit-gradient(linear, 100% 100%, 0% 0%, from(rgba(42,42,42,0.6)), color-stop(0.51,rgba(107,107,107,0.6)), color-stop(0.52,rgba(129,129,129,0.6)));
+	content: '';
+	position: absolute;
+	display: block;
+	width: 68px;
+	height: 91px;
+	top: 0px;
+	left: 0px;
+}
+
+.infoCardDetail p.evolutionProgress {
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+	background: rgb(79,79,79);
+	margin: 5px 0px 0px 0px;
+	border-radius: 3px;
+	padding: 0px;
+}
+
+.infoCardDetail div.switchCardType {
+	display: inline-block;
+	width: 290px;
+	margin: 0px 0px 2px 7px;
+	border-radius: 15px;
+	padding: 2px;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(139,134,121)), to(rgb(198,196,187)));
+}
+
+.infoCardDetail span.current {
+	color: rgb(158,231,0);
+}
+
+.infoCardDetail .contentCard div.command {
+	margin-bottom: 5px;
+}

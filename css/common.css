@@ -1,0 +1,155 @@
+/*
+span.label {
+	text-align: center;
+	font-size: 11px;
+	color: #ffd;
+	background: #999;
+	border-radius: 3px;
+	margin-right: 4px;
+}
+*/
+
+span.notice {
+	color: #ff675f;
+}
+
+p.num {
+	text-align: center;
+	font-size: 12px;
+}
+
+p.paging {
+	text-align: center;
+	margin: 14px auto;
+}
+
+.paging a {
+	margin-left: 14px;
+	margin-right: 14px;
+	font-weight: bold;
+/*
+	color: black;
+	box-shadow: none;
+*/
+}
+
+.paging a:hover {
+	color: #007acc;
+}
+
+.form {
+	margin-bottom: 28px;
+	text-align: center;
+}
+
+.form div {
+	width: 308px;
+	height: auto;
+	text-align: center;
+	margin: 0px auto 7px auto;
+	padding: 7px 7px 0px 7px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.form p {
+	margin-bottom: 14px;
+}
+
+.form p.label {
+	margin: 0px;
+	font-weight: bold;
+}
+
+.selectBox {
+	width: 256px;
+}
+
+.checkBox {
+	margin-left: 10px;
+}
+
+.radioButton {
+	margin-left: 10px;
+}
+
+input.searchText {
+	width: 256px;
+}
+
+select {
+	font-size: 13px;
+}
+
+p.announce {
+	text-align: center;
+	font-weight: bold;
+}
+
+p.warning {
+	text-align: center;
+	font-weight: bold;
+	color: #ff675f;
+}
+
+span.commandCost {
+	display: inline-block;
+	width: 100px;
+	height: 8px;
+	background: 0% 0% repeat rgb(120,120,118);
+	box-shadow: rgb(0,0,0) 0px 0px 0px 1px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-top: 4px;
+}
+ 
+.commandCost .spend {
+	height: 6px;
+	position: absolute;
+	background: 0% 0% / 100% 100% repeat rgb(158,231,0);
+	border: none;
+	border-radius: 5px;
+}
+
+.commandCost .cost0 {
+	width: 0px;
+}
+
+.commandCost .cost1 {
+	width: 34px;
+}
+
+.commandCost .cost2 {
+	width: 67px;
+}
+
+.commandCost .cost3 {
+	width: 98px;
+}
+
+.commandCost .partition {
+	width: 2px;
+	height: 8px;
+	position: absolute;
+	background-color: rgb(0,0,0);
+}
+
+.commandCost .part1 {
+	margin-left: 32px;
+}
+
+.commandCost .part2 {
+	margin-left: 65px;
+}
+
+img.rarity {
+	width: 17px;
+	height: 17px;
+	margin: 0px 1px 5px 6px;
+}
+
+img.shinsei {
+	width: 17px;
+	height: 17px;
+	margin: 0px 1px 5px 3px;
+}
