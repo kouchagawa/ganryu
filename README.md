@@ -37,8 +37,8 @@ ganryu/
 ├── css/          # スタイルシート
 ├── csv/          # マスタデータ・インポート用CSV
 ├── js/           # フロントエンド制御用JavaScript（jQuery）
-├── php/          # 検索ロジック・インクルードファイル（tnk_include.php 等）
 ├── sql/          # データベース定義・クエリ関連ファイル
+├── src/          # 検索ロジック・インクルードファイル（tnk_include.php 等）
 ├── functions.php # WordPress子テーマ機能拡張
 ├── style.css     # 子テーマ定義・基本スタイル
 └── README.md     # 本ドキュメント
